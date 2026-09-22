@@ -729,7 +729,7 @@ function updateUI(d) {{
         document.getElementById("rf-live-panel").style.display = "none";
     }}
     // === AI Market Intelligence ===
-    const ai = d.ai_market || {mode:"SHADOW", items:[], active:null};
+    const ai = d.ai_market || {{mode:"SHADOW", items:[], active:null}};
     const aiColor = (score) => Number(score||0) >= 82 ? "#00ffa6" : Number(score||0) >= 68 ? "#f1c40f" : "#e74c3c";
     let aiHtml = `<div style="margin-bottom:8px;color:#9ca3af">Mode: <b style="color:#00ffa6">${{ai.mode||"SHADOW"}}</b> · execution remains under Strategy/Risk Gate</div>`;
     if (ai.active && ai.active.score !== undefined) {{
